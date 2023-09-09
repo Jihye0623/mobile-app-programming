@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OneFragment"
+    android:background="#ffaaaa"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/test_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50dp"
+        android:text="날짜"
+        />
+    <Button
+        android:id="@+id/dateBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="날짜 정하기"
+        />
+
+    <TextView
+        android:id="@+id/test_class"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="과목"
+        android:textSize="50dp" />
+
+    <Button
+        android:id="@+id/classBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="과목 정하기"
+        />
+
+
+</LinearLayout>

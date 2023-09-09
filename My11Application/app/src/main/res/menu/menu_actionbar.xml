@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu1"
+        android:title="Menu1"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu2"
+        android:title="Menu2"
+        android:icon="@android:drawable/ic_menu_add"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/menu_search"
+        android:title="Search"
+        android:icon="@android:drawable/ic_menu_search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="always"/>
+</menu>
+
+<!-- 액션바 -->
+<!-- New -> Android Resource Directory -> 디렉토리명은 munu -> resuorce type도 menu -> 만들기 -->
+<!-- New -> Resource File -> menu_actionbar -> 만들기 -->
+<!-- 원래 menu의 item은 모두 땡땡땡을 클릭해야 나옴 : 기본상태 never -->
+<!-- showAsAction: ifRoom: 공간 있으면 빼기, always: 항상 밖으로 나오게 하기 -->
+
+<!-- 툴바 -->
+<!-- 먼저 위의 주석처럼 파일 세팅하기-->
+<!-- values - themes - NoActionBar 설정하여 액션바 숨기기 -->
+<!-- MainActivity.kt에서 toolbar 설정 -->
+<!-- activity_main.xml에서 <android.appcompat.widget.Toolbar ... /> 를 설정 -->

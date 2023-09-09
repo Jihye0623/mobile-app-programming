@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_content"
+    tools:context=".OneFragment">
+    <!--여러 뷰를 겹쳐서 보기 위해-->
+
+    <!-- 리사이클러 뷰 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#aaffaa">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fab"
+        android:layout_margin="10dp"
+        android:text="Extened Button"
+        app:icon="@android:drawable/ic_input_add"
+        app:layout_anchor="@id/recyclerView"
+        app:layout_anchorGravity="bottom|right"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+<!-- 프레그먼트(뷰페이저) -->
+<!-- app에서 New -> Fragment -> Fragment(Blank) -> 이름을 짓고 finish -> java 폴더와 layout 폴더에 각각 kt, xml 파일 생성됨 -->
+<!-- 실습에서는 총 3개의 fragment 만듦 -->

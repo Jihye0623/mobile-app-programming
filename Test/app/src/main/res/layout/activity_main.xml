@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:id="@+id/drawer"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <!--앱바 (이 안에 툴바 있음)-->
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="240dp">
+            <!--툴바 - 툴바 설정 -->
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/toolbar"
+                style="@style/Widget.MaterialComponents.Toolbar.Primary"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/baseball"
+                />
+
+            <!--탭 레이아웃-->
+            <com.google.android.material.tabs.TabLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/tabs"
+                app:tabTextColor="#ff000000" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- 뷰페이저 - 스와이프로 넘기는 화면 구성-->
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewpager2" />
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/main_drawer"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:background="#ffaaff"
+        android:text="Drawer Layout!!!!"
+        android:fitsSystemWindows="true"
+        android:gravity="center"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/navigation_header"
+        app:menu="@menu/menu_navigation"
+        />
+
+</androidx.drawerlayout.widget.DrawerLayout>

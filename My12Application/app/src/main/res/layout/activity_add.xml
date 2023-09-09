@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/myData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Todo 등록"
+        android:textSize="15dp"
+        android:textColor="@android:color/darker_gray"/>
+
+    <EditText
+        android:id="@+id/add_editView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"/>
+
+    <Button
+        android:id="@+id/btnCall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="전화걸기 119"
+        android:layout_marginTop="40dp" />
+
+    <Button
+        android:id="@+id/btnWeb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="덕성여자대학교"/>
+
+    <Button
+        android:id="@+id/btnGallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="사진/이미지 보기" />
+
+    <Button
+        android:id="@+id/btnMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="구글 지도 보기"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="프로필 사진 교체"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"/>
+
+    <!--카드 뷰는 그냥 예쁘게 하려구-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardCornerRadius="75dp"
+        app:cardElevation="0dp"
+        >
+        <ImageView
+            android:id="@+id/userImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/user_basic"
+            android:scaleType="centerCrop"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/galleryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gallery App"
+        android:layout_marginTop="24dp"/>
+
+    <Button
+        android:id="@+id/cameraButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Camera App"
+        android:layout_marginTop="24dp"/>
+</LinearLayout>
+
+<!--- app -> New -> Activity - Empty Activity -> 이름 정해서 finish -> 그러면 kt, xml 파일 두개 생성됨-->
+<!-- 실습파일 복사 -->

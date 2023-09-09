@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/threeRoot"
+    android:background="#ffffff"
+    tools:context=".ThreeFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:textSize="50dp"
+            android:text="설정" />
+
+        <Button
+            android:id="@+id/exitBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="설정" />
+
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/backgroundCBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="배경색 변경" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/redBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff0000"
+            android:text="빨강" />
+
+        <RadioButton
+            android:id="@+id/greenBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00ff00"
+            android:text="초록" />
+
+        <RadioButton
+            android:id="@+id/blueBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00ffff"
+            android:text="파랑" />
+
+        <RadioButton
+            android:id="@+id/whiteBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="하양" />
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/emailCBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="이메일 변경" />
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress" />
+
+    <CheckBox
+        android:id="@+id/phoneCBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="전화번호 변경" />
+    <EditText
+        android:id="@+id/phoneEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone" />
+
+</LinearLayout>

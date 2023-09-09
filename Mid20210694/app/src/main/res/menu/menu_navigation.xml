@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu1"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="덕성여자대학교"/>
+    <item
+        android:id="@+id/menu2"
+        android:icon="@android:drawable/ic_menu_help"
+        android:title="긴급전화(119) 걸기"/>
+    <item
+        android:id="@+id/menu3"
+        android:icon="@android:drawable/ic_menu_mapmode"
+        android:title="지도보기"/>
+</menu>

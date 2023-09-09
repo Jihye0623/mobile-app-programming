@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/intro_main"
+        android:gravity="center_horizontal"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:id="@+id/textViewMain"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/intro_detail"
+        android:gravity="center_horizontal"
+        android:id="@+id/textViewDetail"
+        android:layout_below="@id/textViewMain"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/intro_delay"
+        android:gravity="center_horizontal"
+        android:id="@+id/textViewDelay"
+        android:layout_below="@id/textViewDetail"
+        android:layout_marginTop="20dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/intro_button"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"/>
+
+</RelativeLayout>
+
+<!-- 가로모드 -->
+<!-- New-> Layout Resource File -> File명은 activity_main -> Orientation 추가-> Landscape 선택 -> OK-->
+<!-- 위의 메뉴를 내려 화면 전환 on하기-->

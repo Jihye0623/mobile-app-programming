@@ -1,0 +1,106 @@
+package com.example.test
+
+import android.app.AlertDialog
+import android.app.DatePickerDialog
+import android.content.DialogInterface
+import android.os.Bundle
+import android.util.Log
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.DatePicker
+import com.example.test.databinding.FragmentOneBinding
+
+// TODO: Rename parameter arguments, choose names that match
+// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+private const val ARG_PARAM1 = "param1"
+private const val ARG_PARAM2 = "param2"
+
+/**
+ * A simple [Fragment] subclass.
+ * Use the [OneFragment.newInstance] factory method to
+ * create an instance of this fragment.
+ */
+class OneFragment : Fragment() {
+    // TODO: Rename and change types of parameters
+    private var param1: String? = null
+    private var param2: String? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        arguments?.let {
+            param1 = it.getString(ARG_PARAM1)
+            param2 = it.getString(ARG_PARAM2)
+        }
+    }
+    val items = arrayOf<String>("C","Python","Java","C++")
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        var binding = FragmentOneBinding.inflate(inflater, container, false)
+
+        binding.dateBtn.setOnClickListener{
+            DatePickerDialog(requireContext(), object: DatePickerDialog.OnDateSetListener{
+                override fun onDateSet(view: DatePicker?, year:Int, month:Int, dayOfMonth:Int){
+                    binding.testDate.text = "${year}년 ${month+1}월 ${dayOfMonth}일"
+
+                }
+            }, 2023,3,3).show()     // month는 0부터 시작
+
+        }
+        var choiceClass:String = items[1]
+
+        val alertHandler = object:DialogInterface.OnClickListener{
+            override fun onClick(dialog: DialogInterface?, which: Int) {
+                when(which){
+                    DialogInterface.BUTTON_POSITIVE -> {
+                        binding.testClass.text = "${choiceClass}"
+                    }
+                    DialogInterface.BUTTON_NEGATIVE -> {
+                        binding.testClass.text = "과목이 선택되지 않았습니다."
+                    }
+                }
+            }
+        }
+
+        binding.classBtn.setOnClickListener{
+            AlertDialog.Builder(requireContext()).run{
+                setTitle("프로그래밍 과목 선택")
+                setSingleChoiceItems(items, 1, object: DialogInterface.OnClickListener{
+                    override fun onClick(dialog: DialogInterface?, which: Int) {
+                        choiceClass = items[which]
+                        Log.d("mobileApp", "${items[which]}가 선택되었습니다.")
+                    }
+                })
+                setNegativeButton("취소",alertHandler)
+                setPositiveButton("선택", alertHandler)
+                show()
+            }
+        }
+
+        return binding.root
+    }
+
+    companion object {
+        /**
+         * Use this factory method to create a new instance of
+         * this fragment using the provided parameters.
+         *
+         * @param param1 Parameter 1.
+         * @param param2 Parameter 2.
+         * @return A new instance of fragment OneFragment.
+         */
+        // TODO: Rename and change types and number of parameters
+        @JvmStatic
+        fun newInstance(param1: String, param2: String) =
+            OneFragment().apply {
+                arguments = Bundle().apply {
+                    putString(ARG_PARAM1, param1)
+                    putString(ARG_PARAM2, param2)
+                }
+            }
+    }
+}

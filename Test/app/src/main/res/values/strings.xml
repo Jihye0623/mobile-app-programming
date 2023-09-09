@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">모바일앱 중간고사</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="drawer_opened">Opened Drawer</string>
+    <string name="drawer_closed">Closed Drawer</string>
+</resources>
+
+<!--    <?xml version="1.0" encoding="utf-8"?>-->
+<!--<androidx.coordinatorlayout.widget.CoordinatorLayout-->
+<!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--xmlns:tools="http://schemas.android.com/tools"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent"-->
+<!--android:background="#ffffaa"-->
+<!--tools:context=".TwoFragment">-->
+
+<!--<LinearLayout-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:orientation="vertical">-->
+
+<!--</LinearLayout>-->
+
+<!--<RadioGroup-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content" >-->
+
+<!--    <RadioButton-->
+<!--        android:id="@+id/radioButton"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="친구" />-->
+
+<!--    <RadioButton-->
+<!--        android:id="@+id/radioButton2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="장소" />-->
+<!--</RadioGroup>-->
+
+<!--<androidx.recyclerview.widget.RecyclerView-->
+<!--    android:id="@+id/recyclerView"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+<!--</androidx.recyclerview.widget.RecyclerView>-->
+
+<!--<com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:id="@+id/fab"-->
+<!--    android:layout_margin="10dp"-->
+<!--    android:text="Extened Button"-->
+<!--    app:icon="@android:drawable/ic_input_add"-->
+<!--    app:layout_anchor="@id/recyclerView"-->
+<!--    app:layout_anchorGravity="bottom|right"-->
+<!--    />-->
+
+<!--</androidx.coordinatorlayout.widget.CoordinatorLayout>-->
